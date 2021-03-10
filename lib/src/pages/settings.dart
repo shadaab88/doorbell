@@ -88,7 +88,7 @@ class _SettingsWidgetState extends StateMVC<SettingsWidget> {
                         boxShadow: [BoxShadow(color: Theme.of(context).hintColor.withOpacity(0.15), offset: Offset(0, 3), blurRadius: 10)],
                       ),
                       child: ListView(
-                        shrinkWrap: true,
+                       // shrinkWrap: true,
                         primary: false,
                         children: <Widget>[
                           ListTile(
@@ -114,7 +114,7 @@ class _SettingsWidgetState extends StateMVC<SettingsWidget> {
                             onTap: () {},
                             dense: true,
                             title: Text(
-                              S.of(context).full_name,
+                              S.of(context).first_name,
                               style: Theme.of(context).textTheme.bodyText2,
                             ),
                             trailing: Text(

@@ -614,14 +614,25 @@ class S {
   }
 
   /// `Full name`
-  String get full_name {
+  String get first_name {
     return Intl.message(
-      'Full name',
-      name: 'full_name',
+      'First name',
+      name: 'first_name',
       desc: '',
       args: [],
     );
   }
+
+/// `Last Name`
+  String get last_name {
+    return Intl.message(
+      'Last name',
+      name: 'last_name',
+      desc: '',
+      args: [],
+    );
+  }
+
 
   /// `Email`
   String get email {
@@ -716,8 +727,8 @@ class S {
   /// `Register`
   String get register {
     return Intl.message(
-      'Register',
-      name: 'register',
+      'Create Account',
+      name: 'Create Account',
       desc: '',
       args: [],
     );
@@ -786,8 +797,8 @@ class S {
   /// `I have account? Back to login`
   String get i_have_account_back_to_login {
     return Intl.message(
-      'I have account? Back to login',
-      name: 'i_have_account_back_to_login',
+      'ALREADY HAVE AN ACCOUNT? SIGN IN',
+      name: 'ALREADYACCOUNT',
       desc: '',
       args: [],
     );
