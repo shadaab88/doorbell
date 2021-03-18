@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 import '../../generated/l10n.dart';
+import '../../ok.dart';
 import '../controllers/user_controller.dart';
 import '../elements/BlockButtonWidget.dart';
 import '../helpers/app_config.dart' as config;
@@ -123,12 +124,23 @@ class _LoginWidgetState extends StateMVC<LoginWidget> {
                       SizedBox(height: 30),
                       BlockButtonWidget(
                         text: Text(
-                          S.of(context).login,
+                          "Hrithik's Tasks",
                           style: TextStyle(color: Theme.of(context).primaryColor),
                         ),
                         color: Theme.of(context).accentColor,
                         onPressed: () {
                           _con.login();
+                        },
+                      ),
+                      SizedBox(height: 5,),
+                      BlockButtonWidget(
+                        text: Text(
+                          "Aman's Tasks",
+                          style: TextStyle(color: Theme.of(context).primaryColor),
+                        ),
+                        color: Theme.of(context).accentColor,
+                        onPressed: () {
+                          Navigator.push(context,MaterialPageRoute(builder: (context) =>Ghar()));
                         },
                       ),
                       SizedBox(height: 15),
