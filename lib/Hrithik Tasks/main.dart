@@ -1,6 +1,6 @@
-import 'package:app_task3/firstScreen.dart';
-import 'package:app_task3/secondScreen.dart';
-import 'package:app_task3/thirdScreen.dart';
+import 'firstScreen.dart';
+import 'secondScreen.dart';
+import 'thirdScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
