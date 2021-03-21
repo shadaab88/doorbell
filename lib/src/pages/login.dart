@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/Hrithik%20Tasks/Hrithik.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 import '../../generated/l10n.dart';
@@ -129,7 +130,7 @@ class _LoginWidgetState extends StateMVC<LoginWidget> {
                         ),
                         color: Theme.of(context).accentColor,
                         onPressed: () {
-                          _con.login();
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> MyHome()));
                         },
                       ),
                       SizedBox(height: 5,),
