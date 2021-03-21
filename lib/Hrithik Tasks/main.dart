@@ -86,7 +86,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                           Image.network("https://img.theweek.in/content/dam/week/news/india/images/2021/3/10/Hitesha-Chandranee-zomato-instagram.jpg",height: 200,width: 200,),
                         ],
                       ),
-                      "Non Violent Zomato".text.headline1(context).extraBold.orange300.make(),
+                      "Non Violent Zomato".text.xl2.extraBold.orange300.make(),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.05),
                   ElevatedButton(
                     onPressed: () {

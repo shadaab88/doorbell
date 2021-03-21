@@ -160,7 +160,7 @@ class _MySecondScreenState extends State<MySecondScreen> {
                             subtitle: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                "Fast Food Corners".text.warmGray200.make(),
+                                "Fast Food Corners".text.gray700.make(),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
 
