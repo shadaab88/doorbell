@@ -11,7 +11,13 @@ class Aman extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
           accentColor: Colors.deepOrange, primaryColor: Colors.deepOrange),
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      darkTheme: ThemeData(primaryColor: Colors.black,
+          primaryColorBrightness: Brightness.dark,
+          primaryColorLight: Colors.black,
+          brightness: Brightness.dark,
+          primaryColorDark: Colors.black,
+          indicatorColor: Colors.white,
+          ),
       themeMode: ThemeMode.dark,
       home: MyHomePage(),
     );
@@ -19,7 +25,9 @@ class Aman extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  final GlobalKey<ScaffoldState> parentScaffoldKey;
+
+  MyHomePage({Key key, this.title, this.parentScaffoldKey}) : super(key: key);
 
   final String title;
 
@@ -46,7 +54,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.deepOrange),
-          onPressed: () => Navigator.of(context).pop(),
+          onPressed: () {
+           Navigator.of(context)
+              .pushReplacementNamed('/Pages', arguments: 2);}
         ),
         title: Text(
           'All Restaurant',
@@ -71,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                   Container(
                     child: FlatButton(
-                        textColor: Colors.white,
+                        //textColor: Colors.white,
                         color: Colors.deepOrange,
                         child: Text('All'),
                         onPressed: () {},
@@ -81,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   SizedBox(width: 10),
                   Container(
                     child: FlatButton(
-                        textColor: Colors.white,
+                        //textColor: Colors.white,
                         color: Colors.transparent,
                         highlightColor: Colors.deepOrange,
                         child: Text('  Delivery Time  '),
@@ -96,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   SizedBox(width: 10),
                   Container(
                     child: FlatButton(
-                        textColor: Colors.white,
+                        //textColor: Colors.white,
                         color: Colors.transparent,
                         highlightColor: Colors.deepOrange,
                         child: Text('  Top Offer  '),
@@ -111,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   SizedBox(width: 10),
                   Container(
                     child: FlatButton(
-                        textColor: Colors.white,
+                        //textColor: Colors.white,
                         color: Colors.transparent,
                         highlightColor: Colors.deepOrange,
                         child: Text('  Top Offer  '),
@@ -142,7 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       print(rname.length);
                     },
                     child: Container(
-                      height: 100,
+                      height: MediaQuery.of(context).size.height*0.137,
                       //width: MediaQuery.of(context).size.width,
                       margin: EdgeInsets.all(7),
                       child: Row(
@@ -154,13 +164,13 @@ class _MyHomePageState extends State<MyHomePage> {
                             borderRadius: BorderRadius.circular(7),
                             child: Image.asset(
                               image[index],
-                              width:100,
-                              height: 100,
+                              width:106,
+                              height: 106,
                             ),
                           ),
                           Container(
                             margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                            height: 100,
+                            //height: MediaQuery.of(context).size.height*0.137,
                             width: MediaQuery.of(context).size.width-160,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

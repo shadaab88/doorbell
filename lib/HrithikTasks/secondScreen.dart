@@ -20,17 +20,18 @@ class MyApp extends StatelessWidget {
 
 class MySecondScreen extends StatefulWidget {
   final GlobalKey<ScaffoldState> parentScaffoldKey;
-  MySecondScreen({Key key, this.title, this.parentScaffoldKey}) : super(key: key);
+
+  MySecondScreen({Key key, this.title, this.parentScaffoldKey})
+      : super(key: key);
   final String title;
+
   @override
   _MySecondScreenState createState() => _MySecondScreenState();
 }
 
 class _MySecondScreenState extends State<MySecondScreen> {
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -48,9 +49,11 @@ class _MySecondScreenState extends State<MySecondScreen> {
           )
         ],
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
+            icon: Icon(Icons.arrow_back, color: Colors.white),
+            onPressed: () {
+              Navigator.of(context)
+                  .pushReplacementNamed('/Pages', arguments: 2);
+            }),
         title: Text(
           'All Restaurants',
           style: TextStyle(fontWeight: FontWeight.bold),
@@ -136,73 +139,82 @@ class _MySecondScreenState extends State<MySecondScreen> {
               ),
             ),
             20.heightBox,
-          Expanded(
-            child: ListView.builder(
-                  itemExtent: MediaQuery.of(context).size.height*0.1,
-                    physics: BouncingScrollPhysics(),
-                    scrollDirection: Axis.vertical,
-                    shrinkWrap: true,
-                    itemCount: ListItemClass.restaurantList.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return
-                        Card(
-                          color: Colors.transparent,
-                          child: ListTile(
-                            onTap:(){},
-                            dense: true,
-                            leading: ClipRRect(
-                              borderRadius: BorderRadius.circular(5.0),
-                              child: Image.network(
-                                  'https://images.pexels.com/photos/2331536/pexels-photo-2331536.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                                fit: BoxFit.fill,),
-                            ),
-                            title: ListItemClass.iconList[index].color==Colors.deepOrange ?
-                            ListItemClass.restaurantList[index].text.white.xl2.bold.make():ListItemClass.restaurantList[index].text.gray700.xl2.bold.make(),//Gets Restaurant name from Variables.dart and Text style given using Vx
-                            subtitle: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+            Expanded(
+              child: ListView.builder(
+                  itemExtent: MediaQuery.of(context).size.height * 0.1,
+                  physics: BouncingScrollPhysics(),
+                  scrollDirection: Axis.vertical,
+                  shrinkWrap: true,
+                  itemCount: ListItemClass.restaurantList.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Card(
+                      color: Colors.transparent,
+                      child: ListTile(
+                        onTap: () {},
+                        dense: true,
+                        leading: ClipRRect(
+                          borderRadius: BorderRadius.circular(5.0),
+                          child: Image.network(
+                            'https://images.pexels.com/photos/2331536/pexels-photo-2331536.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        title: ListItemClass.iconList[index].color ==
+                                Colors.deepOrange
+                            ? ListItemClass
+                                .restaurantList[index].text.white.xl2.bold
+                                .make()
+                            : ListItemClass
+                                .restaurantList[index].text.gray700.xl2.bold
+                                .make(),
+                        //Gets Restaurant name from Variables.dart and Text style given using Vx
+                        subtitle: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            "Fast Food Corners".text.gray700.make(),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                "Fast Food Corners".text.gray700.make(),
+                                Icon(MdiIcons.clipboardClockOutline,
+                                    color: Vx.gray700, size: 18),
+                                ListItemClass.deliveryTime[index].text.gray700
+                                    .make(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Icon(MdiIcons.sale,
+                                    color: Vx.gray700, size: 18),
                                 Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
                                   children: [
-                                    Icon(
-                                        MdiIcons.clipboardClockOutline,
-                                        color: Vx.gray700,
-                                    size:18 ),
-                                    ListItemClass.deliveryTime[index].text.gray700.make(),
-                                  ],
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-
-                                  children: [
-                                    Icon(MdiIcons.sale,color: Vx.gray700,
-                                        size:18),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                      children: [
-                                        ListItemClass.discText.text.gray700.make(),
-                                        ListItemClass.discountpercent[index].text.gray700.make(),
-                                        ListItemClass.discText2.text.gray700.make(),
-                                      ],
-                                    )
+                                    ListItemClass.discText.text.gray700.make(),
+                                    ListItemClass
+                                        .discountpercent[index].text.gray700
+                                        .make(),
+                                    ListItemClass.discText2.text.gray700.make(),
                                   ],
                                 )
                               ],
-                            ),
-                            isThreeLine: true,
-                            trailing: Stack(
-                              alignment: Alignment.center,
-                              children: <Widget>[
-                                ListItemClass.iconList[index],//Gets Icon List from Variables.dart based on Index
-                                ListItemClass.iconNum[index].text.make(),//Gets Icon number from Variables.dart based on Index
-                              ],
-                            ),
-                          ),
-                        );
-                    }),
-          ),
+                            )
+                          ],
+                        ),
+                        isThreeLine: true,
+                        trailing: Stack(
+                          alignment: Alignment.center,
+                          children: <Widget>[
+                            ListItemClass.iconList[index],
+                            //Gets Icon List from Variables.dart based on Index
+                            ListItemClass.iconNum[index].text.make(),
+                            //Gets Icon number from Variables.dart based on Index
+                          ],
+                        ),
+                      ),
+                    );
+                  }),
+            ),
             // This trailing comma makes auto-formatting nicer for build methods.
           ],
         ),
