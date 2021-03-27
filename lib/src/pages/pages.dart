@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import '../../HrithikTasks/secondScreen.dart';
 import '../elements/DrawerWidget.dart';
 import '../elements/FilterWidget.dart';
 import '../helpers/helper.dart';
@@ -68,6 +68,9 @@ class _PagesWidgetState extends State<PagesWidget> {
         case 4:
           widget.currentPage = MessagesWidget(parentScaffoldKey: widget.scaffoldKey); //FavoritesWidget(parentScaffoldKey: widget.scaffoldKey);
           break;
+        case 5:
+          widget.currentPage = MySecondScreen(parentScaffoldKey: widget.scaffoldKey); //FavoritesWidget(parentScaffoldKey: widget.scaffoldKey);
+          break;
       }
     });
   }
@@ -130,6 +133,10 @@ class _PagesWidgetState extends State<PagesWidget> {
             ),
             BottomNavigationBarItem(
               icon: new Icon(Icons.chat),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: new Icon(Icons.person_rounded),
               label: '',
             ),
           ],

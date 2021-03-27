@@ -101,14 +101,14 @@ class _MyFirstPageState extends State<MyFirstPage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.black12,
       appBar:
       AppBar(
         backgroundColor: Colors.deepOrange,
         elevation: 0,
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-          title: Text('NON VIOLENT ZOMATO',
+          title: Text('Guest Details',
               textAlign: TextAlign.end,
               style: TextStyle(fontWeight: FontWeight.bold)),
           actions: <Widget>[
@@ -281,19 +281,19 @@ class _MyFirstPageState extends State<MyFirstPage> {
             BottomNavigationBarItem(
               icon: Icon(MdiIcons.mapMarkerRadiusOutline),
               label: 'Locate',
-              backgroundColor: Colors.green,
+              backgroundColor: Colors.transparent,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.search_outlined),
               label: 'Search',
-              backgroundColor: Colors.redAccent,
+              backgroundColor: Colors.transparent,
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 MdiIcons.sale,
               ),
               label: 'Offers',
-              backgroundColor: Colors.deepOrange,
+              backgroundColor: Colors.transparent,
 
             ),
             BottomNavigationBarItem(
@@ -302,14 +302,14 @@ class _MyFirstPageState extends State<MyFirstPage> {
                 color: Colors.white,
               ),
               label: 'Cart',
-              backgroundColor: Colors.indigo,
+              backgroundColor: Colors.transparent,
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.account_circle_outlined,
               ),
               label: 'Account',
-              backgroundColor: Colors.teal,
+              backgroundColor: Colors.transparent,
             ),
           ],
           onTap: (index){

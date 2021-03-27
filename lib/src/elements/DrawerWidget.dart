@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/HrithikTasks/firstScreen.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 import '../../generated/l10n.dart';
@@ -21,7 +22,8 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
         children: <Widget>[
           GestureDetector(
             onTap: () {
-              currentUser.value.apiToken != null ? Navigator.of(context).pushNamed('/Profile') : Navigator.of(context).pushNamed('/Login');
+              Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+              // currentUser.value.apiToken != null ? Navigator.of(context).pushNamed('/Profile') : Navigator.of(context).pushNamed('/Login');
             },
             child: currentUser.value.apiToken != null
                 ? UserAccountsDrawerHeader(

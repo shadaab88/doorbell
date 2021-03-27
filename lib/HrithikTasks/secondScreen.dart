@@ -19,14 +19,15 @@ class MyApp extends StatelessWidget {
 }
 
 class MySecondScreen extends StatefulWidget {
-  MySecondScreen({Key key, this.title}) : super(key: key);
-
+  final GlobalKey<ScaffoldState> parentScaffoldKey;
+  MySecondScreen({Key key, this.title, this.parentScaffoldKey}) : super(key: key);
   final String title;
   @override
   _MySecondScreenState createState() => _MySecondScreenState();
 }
 
 class _MySecondScreenState extends State<MySecondScreen> {
+
   @override
   Widget build(BuildContext context) {
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/Hrithik%20Tasks/Hrithik.dart';
+import 'package:food_delivery_app/HrithikTasks/Hrithik.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 import '../../generated/l10n.dart';
