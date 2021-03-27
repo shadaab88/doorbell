@@ -8,6 +8,7 @@ import '../pages/home.dart';
 import '../pages/map.dart';
 import '../pages/notifications.dart';
 import '../pages/orders.dart';
+import '../pages/jatin.dart';
 import 'messages.dart';
 
 // ignore: must_be_immutable
@@ -68,6 +69,10 @@ class _PagesWidgetState extends State<PagesWidget> {
         case 4:
           widget.currentPage = MessagesWidget(parentScaffoldKey: widget.scaffoldKey); //FavoritesWidget(parentScaffoldKey: widget.scaffoldKey);
           break;
+          
+          case 5:
+          widget.currentPage = Page1(parentScaffoldKey: widget.scaffoldKey); //FavoritesWidget(parentScaffoldKey: widget.scaffoldKey);
+          break; 
       }
     });
   }
