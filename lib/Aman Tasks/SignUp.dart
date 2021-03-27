@@ -14,8 +14,8 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SingleChildScrollView(
-          child: Container(
-      child: Column(children: [
+      child: Container(
+        child: Column(children: [
           // Image(
           //   image: AssetImage('resources/doorbell_pic.jpg'),
           // ),
@@ -45,7 +45,7 @@ class _SignUpState extends State<SignUp> {
                           style: TextStyle(
                             fontSize: 20.0,
                           ),
-                        ),//Register Card
+                        ), //Register Card
                       ),
                       SizedBox(
                         height: 30,
@@ -57,7 +57,7 @@ class _SignUpState extends State<SignUp> {
                               suffixIcon: Icon(Icons.accessibility_new_rounded),
                               border: InputBorder.none,
                               hintText: 'Name'),
-                        ),//Fetching Name
+                        ), //Fetching Name
                       ),
                       Container(
                         padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
@@ -66,7 +66,7 @@ class _SignUpState extends State<SignUp> {
                               suffixIcon: Icon(Icons.mail_outline_rounded),
                               border: InputBorder.none,
                               hintText: 'Email'),
-                        ),//Fetching email
+                        ), //Fetching email
                       ),
                       Container(
                           padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
@@ -75,8 +75,8 @@ class _SignUpState extends State<SignUp> {
                                 suffixIcon: Icon(Icons.call),
                                 border: InputBorder.none,
                                 hintText: 'Mobile Number'),
-                          )//Fetching Mobile Number
-                      ),
+                          ) //Fetching Mobile Number
+                          ),
                       Container(
                           padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                           child: Column(
@@ -108,7 +108,7 @@ class _SignUpState extends State<SignUp> {
                                     child: Text(value),
                                   );
                                 }).toList(),
-                              ),//City DropDown
+                              ), //City DropDown
                             ],
                           )),
                       SizedBox(
@@ -147,7 +147,7 @@ class _SignUpState extends State<SignUp> {
                   textColor: Colors.white,
                   padding: EdgeInsets.all(8.0),
                   onPressed: () {
-                    //Navigator.pop(context);
+                    Navigator.pop(context);
                   },
                   child: Text(
                     "go".toUpperCase(),
@@ -160,8 +160,18 @@ class _SignUpState extends State<SignUp> {
               //go buttn
             ],
           ),
-      ]),
-    ),
-        ));
+          FlatButton(
+            onPressed: () {
+              Navigator.of(context)
+                  .pushReplacementNamed('/Pages', arguments: 2);
+            },
+            shape: StadiumBorder(),
+            textColor: Theme.of(context).hintColor,
+            child: Text('skip'),
+            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 14),
+          ),
+        ]),
+      ),
+    ));
   }
 }
