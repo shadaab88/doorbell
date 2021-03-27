@@ -1,5 +1,8 @@
 
 import 'package:flutter/material.dart';
+import '../src/pages/pages.dart';
+
+
 
 import 'SignUp.dart';
 
@@ -106,6 +109,18 @@ class _MyApp2State extends State<MyApp2> {
                           decoration: TextDecoration.underline),
                     )),
               ],
+            ),
+      FlatButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PagesWidget()),
+                );
+              },
+              shape: StadiumBorder(),
+              textColor: Theme.of(context).hintColor,
+              child: Text('skip'),
+              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 14),
             ),
           ]),
         ),
