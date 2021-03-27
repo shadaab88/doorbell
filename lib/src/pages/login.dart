@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/alial/Documents/doorbell/lib/Aman%20Tasks/Aman1.dart';
-import 'package:food_delivery_app/Hrithik%20Tasks/Hrithik.dart';
+//import 'file:///C:/Users/alial/Documents/doorbell/lib/Aman%20Tasks/Aman1.dart';
+//import 'package:food_delivery_app/Hrithik%20Tasks/Hrithik.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
-import '../../Aman Tasks/SignUp.dart';
+import 'package:food_delivery_app/Aman%20Tasks/SignUp.dart';
 import '../../generated/l10n.dart';
-import '../../Aman Tasks/ok.dart';
+import 'package:food_delivery_app/Aman%20Tasks/ok.dart';
 import '../controllers/user_controller.dart';
 import '../elements/BlockButtonWidget.dart';
 import '../helpers/app_config.dart' as config;
