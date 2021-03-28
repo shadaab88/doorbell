@@ -136,6 +136,14 @@ class _PagesWidgetState extends State<PagesWidget> {
             BottomNavigationBarItem(
               icon: new Icon(Icons.chat),
               label: '',
+
+              
+            ),
+              BottomNavigationBarItem(
+              icon: new Icon(Icons.home),
+              label: '',
+
+              
             ),
           ],
         ),

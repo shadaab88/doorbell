@@ -2,18 +2,18 @@
 
 class List1 {
   static List<String> imageList = [
-    "assets/a.jpg",
-    "assets/a.jpg",
-    "assets/a.jpg",
-    "assets/a.jpg",
-    "assets/b.jpg",
-    "assets/a.jpg",
-    "assets/3.jpg",
-    "assets/b.jpg",
-    "assets/b.jpg",
-    "assets/b.jpg",
-    "assets/b.jpg",
-    "assets/b.jpg",
+    "assets/img/a.jpg",
+    "assets/img/a.jpg",
+    "assets/img/a.jpg",
+    "assets/img/a.jpg",
+    "assets/img/b.jpg",
+    "assets/img/a.jpg",
+    "assets/img/3.jpg",
+    "assets/img/b.jpg",
+    "assets/img/b.jpg",
+    "assets/img/b.jpg",
+    "assets/img/b.jpg",
+    "assets/img/b.jpg",
   ];
 
   static List<String> stringList = [

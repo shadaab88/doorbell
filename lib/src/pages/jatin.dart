@@ -33,6 +33,12 @@ class _Page1State extends State<Page1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.of(context)
+                  .pushReplacementNamed('/Pages', arguments: 2);}
+        ),
         title: Text('DoorBell'),
         backgroundColor: Color(0xff8e3c00),
       ),
@@ -74,7 +80,7 @@ class _Page1State extends State<Page1> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(25.0),
                       child: Image.asset(
-                        'assets/3.jpg',
+                        'assets/img/3.jpg',
                       ),
                     ),
                   ),
