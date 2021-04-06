@@ -131,7 +131,7 @@ class _LoginWidgetState extends StateMVC<LoginWidget> {
               ),
               FlatButton(
                 onPressed: () {
-                  Navigator.of(context).pushReplacementNamed('/Pages', arguments: 2);
+                  Navigator.of(context).pushReplacementNamed('/Pages', arguments: 3);
 
                 },
                 shape: StadiumBorder(),

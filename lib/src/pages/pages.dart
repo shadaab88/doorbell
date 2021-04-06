@@ -59,27 +59,28 @@ class _PagesWidgetState extends State<PagesWidget> {
               MyHomePage(parentScaffoldKey: widget.scaffoldKey);
           break;
         case 1:
+          widget.currentPage =
+              NotificationsWidget(parentScaffoldKey: widget.scaffoldKey);
+          break;
+        case 2:
           widget.currentPage = MapWidget(
               parentScaffoldKey: widget.scaffoldKey,
               routeArgument: widget.routeArgument);
           break;
-        case 2:
+        case 3:
           widget.currentPage =
               HomeWidget(parentScaffoldKey: widget.scaffoldKey);
           break;
-        case 3:
+        case 4:
           widget.currentPage =
               OrdersWidget(parentScaffoldKey: widget.scaffoldKey);
           break;
-        case 4:
+        case 5:
           widget.currentPage = MessagesWidget(
               parentScaffoldKey: widget
                   .scaffoldKey); //FavoritesWidget(parentScaffoldKey: widget.scaffoldKey);
           break;
-        case 5:
-          widget.currentPage =
-              NotificationsWidget(parentScaffoldKey: widget.scaffoldKey);
-          break;
+
         case 6:
           widget.currentPage = MySecondScreen(
               parentScaffoldKey: widget

@@ -163,7 +163,7 @@ class _SignUpState extends State<SignUp> {
           FlatButton(
             onPressed: () {
               Navigator.of(context)
-                  .pushReplacementNamed('/Pages', arguments: 2);
+                  .pushReplacementNamed('/Pages', arguments: 3);
             },
             shape: StadiumBorder(),
             textColor: Theme.of(context).hintColor,

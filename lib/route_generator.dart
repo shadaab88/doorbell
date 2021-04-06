@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Aman Tasks/SignUp.dart';
 import 'src/models/route_argument.dart';
 import 'src/pages/cart.dart';
 import 'src/pages/category.dart';
@@ -24,7 +25,6 @@ import 'src/pages/profile.dart';
 import 'src/pages/razorpay_payment.dart';
 import 'src/pages/reviews.dart';
 import 'src/pages/settings.dart';
-import 'src/pages/signup.dart';
 import 'src/pages/splash_screen.dart';
 import 'src/pages/tracking.dart';
 
@@ -38,11 +38,11 @@ class RouteGenerator {
       case '/Splash':
         return MaterialPageRoute(builder: (_) => SplashScreen());
       case '/SignUp':
-        return MaterialPageRoute(builder: (_) => SignUpWidget());
+        return MaterialPageRoute(builder: (_) => SignUp());
       case '/MobileVerification':
-        return MaterialPageRoute(builder: (_) => SignUpWidget());
+        return MaterialPageRoute(builder: (_) => SignUp());
       case '/MobileVerification2':
-        return MaterialPageRoute(builder: (_) => SignUpWidget());
+        return MaterialPageRoute(builder: (_) => SignUp());
       case '/Login':
         return MaterialPageRoute(builder: (_) => LoginWidget());
       case '/Profile':
